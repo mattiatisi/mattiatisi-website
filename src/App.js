@@ -1,21 +1,23 @@
-import logo from "./logo.svg";
+/*   REACT   */
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+/*   STYLE   */
 import "./App.css";
 
-function App() {
+import Header from "./components/Header";
+import Layout from "./components/Layout";
+/*   LOADING SCREEN   */
+import LoadingScreen from "./components/LoadingScreen";
+
+export default function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3200);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>HI trgnt</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
-      </header> 
-    </div>
+    <>
+     <h1> iern </h1>
+    </>
   );
 }
-
-export default App;
